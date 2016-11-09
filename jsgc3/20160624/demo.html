@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    var arr = [
+        {
+            name: 'a',
+            age: 5
+        },
+        {
+            name: 'b',
+            age: 2
+        },
+        {
+            name: 'c',
+            age: 1
+        },
+        {
+            name: 'd',
+            age: 3
+        },
+        {
+            name: 'e',
+            age: 4
+        }
+    ];
+    var CommonUtils = {
+        sortField: function (data, field) {
+           return data.sort(function(obj1,obj2){
+                var val1 = obj1[field];
+                var val2 = obj2[field];
+                return val1 - val2;
+            });
+        },
+        reverseField:function(data, field){
+            return data.sort(function(obj1,obj2){
+                var val1 = obj1[field];
+                var val2 = obj2[field];
+                return val2 - val1;
+            });
+        }
+    };
+
+    var data1 = CommonUtils.sortField(arr,'age');
+    var data2 = CommonUtils.reverseField(data1,'age');
+
+</script>

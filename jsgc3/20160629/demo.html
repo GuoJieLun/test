@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+
+    function Person(name, age, job) {
+        this.name = name;
+        this.age = age;
+        this.job = job;
+        this.firends = ['小明', '小红'];
+    }
+
+    Person.prototype = {
+        sayName: function () {
+            alert(this.name);
+        }
+    };
+
+    var person1 = new Person('张三', 18, '班长');
+    var person2 = new Person('李四', 19, '组长');
+
+    person1.firends.push('jay');
+    alert(person1.firends);
+    alert(person2.firends);
+
+</script>

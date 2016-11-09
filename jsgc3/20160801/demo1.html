@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    window.onload = function () {
+        function createFunction(){
+            var ret = [];
+            for(var  i = 0; i < 10; i++){
+                ret.push((function(num){
+                    return num;
+                })(i));
+            }
+            return ret;
+        }
+
+        function createFunA(){
+            var ret = new Array();
+            for(var i = 0; i < 10; i++){
+                ret[i] = function(){
+                    return i;
+                }
+            }
+            return ret;
+        }
+
+        console.log(createFunction());
+        console.log(createFunA()[0]);
+        var  a=[],
+                b=[],
+                c=a==b;
+        console.log(c);
+
+
+
+    }
+</script>
